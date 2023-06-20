@@ -18,10 +18,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Alerttt {
 	public static void main(String[] args) throws Throwable {
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
+		// options.addArguments("--remote-allow-origins=*");
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-dev-shm-usage");
-		
+
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://demoqa.com/alerts");
@@ -30,9 +30,8 @@ public class Alerttt {
 		driver.findElement(By.xpath("//button[@id = 'promtButton']"));
 		a.sendKeys("Java");
 		a.accept();
-		 
 
-		//Output is not Fetched
-		
-		}			
+		// Output is not Fetched
+
+	}
 }
